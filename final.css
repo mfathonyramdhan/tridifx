@@ -1,20 +1,6 @@
-/* ==========================================
-   FINAL.CSS
-   These are the final styles for the project.
-
-   Course:  CSS3 in 30 Days
-   Author:  Brad Hussey
-   Website: codecollege.ca
-   ========================================== */
-
-
-/* =========================
-   3D LAYER EFFECT
-   ========================= */
-
 .final__layers {
   position: relative;
-  min-height: 638px;
+  min-height: 450px;
   max-width: 360px;
 }
 
@@ -24,43 +10,53 @@
   height: 100%;
   transition: all ease 1600ms;
   transform-style: preserve-3d;
+  transform: perspective(1200px);
 }
 
 .final__layers:hover img {
-  /*
-  The "perspective" CSS function (or property) enables 3D space and produces the illustion of "distance" between the Z plane and the user.
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(35px) translateY(0px) translateZ(180px);
+}
 
-  Smaller value = exaggerated effect
-  Larger value = subtle effect
-  */
-  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(180px);
+.final__layers img.back {
+  width: 360px;
+  height: 450px;
+  left: 0;
+  top: 0;
 }
 
 .final__layers img.mid {
-  width: 320px;
-  left: 20px;
-}
-
-.final__layers img.top {
-  width: 300px;
-  left: 30px;
-  top: -5px;
+  width: 360px;
+  height: 360px;
+  left: 0;
+  top: 45px;
 }
 
 .final__layers img.tippy {
-  width: 280px;
-  top: -150px;
-  left: 40px;
+  width: 251.86px;
+  height: 309.67px;
+  left: 61.36px;
+  top: 70.33px;
+}
+
+.final__layers img.top {
+  width: 321.33px;
+  height: 432px;
+  left: 19.33px;
+  top: 3.67px;
 }
 
 .final__layers:hover img.mid {
-  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(240px);
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(35px) translateY(0px) translateZ(240px);
 }
 
 .final__layers:hover img.top {
-  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg) translateX(35px) translateY(0px) translateZ(280px);
+  transform: perspective(1200px) rotateX(50deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(35px) translateY(0px) translateZ(280px);
 }
 
 .final__layers:hover img.tippy {
-  transform: perspective(1200px) rotateX(60deg) rotateY(20deg) rotateZ(-25deg) translateX(-20px) translateY(20px) translateZ(260px);
+  transform: perspective(1200px) rotateX(60deg) rotateY(20deg) rotateZ(-25deg)
+    translateX(-20px) translateY(20px) translateZ(260px);
 }
